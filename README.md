@@ -10,7 +10,7 @@ $ CREATE DATABASE socialmediadb;
 
 $ CREATE USER socialuser IDENTIFIED WITH mysql_native_password BY 'socialpass';
 
-$ GRANT ALL PRIVILEGES on socialmediadb.* to socialuser;
+$ GRANT ALL PRIVILEGES ON socialmediadb.* TO socialuser;
 
 $ FLUSH PRIVILEGES;
 ```
