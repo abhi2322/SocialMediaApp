@@ -16,7 +16,9 @@ const Users=db.define('user',{
     id:COL_ID_DEF,
     username:{
         type:DataTypes.STRING,
-        allowNull:false
+        allowNull:false,
+        unique:true
+        
     }
 })
 
