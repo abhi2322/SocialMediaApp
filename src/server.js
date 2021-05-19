@@ -1,8 +1,14 @@
 const express=require('express')
-
-
 const {db}=require('./db/models')
 const app=express()
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
+const {userRoute}=require("./routes/users")
+const {postRoute}=require("./routes/posts")
+app.use("/api/user",userRoute)
+app.use("/api/posts",postRoute)
+app.use('/',express.static(__dirname+'/public'))
+
 
 db.sync()
 .then(()=>{

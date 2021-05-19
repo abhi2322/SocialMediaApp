@@ -10,6 +10,7 @@ async function createNewPost(userId,title,body){
 }
 
 async function showAllposts(query){
+    //Todo for query
     const posts=await Posts.findAll({
         include:[Users]
     })
